@@ -15,20 +15,38 @@
     table{
         border:5px solid black;
         border-collapse: collapse;
-        width:70%
+        width:70%;
     }
     th, td{
         border:3px solid black;
         padding:5px;
         text-align: center;
     }
-    p {
+div.form
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    float:none;
+}
+
+    p{
         position: relative;
         margin: 35px 70px 15px 100px;
      }
-     ol,ul {
+    ol,ul {
         margin: 5px 70px 35px 100px;
      }
+
+
+
+
     </style>
 
 
@@ -36,7 +54,7 @@
 <body style="background-color:#bdd5f2">
 
     <h1 style = "font-size: 54px;"> Welcome!!! </h1>
-    <img src="IMG_20191007_093737_Bokeh__01.jpg" align ="right" width = 18%>
+    <img src="IMG_20191007_093737_Bokeh__01.jpg" align ="right" width = 200px>
     <div>
         <p>
             Hello everyone, I am Ravi Viswanadhula. I would like to share my experience sofar in MSIT. Will start with why MSIT is diffrent
@@ -130,6 +148,13 @@
         </p>
     </div>
 
+    <div class = "form">
+        <h3 align="center">Subscribe to MSIT news letter</h3>
+        <form>
+            <input type ="text" Placeholder = "Email Address" name ="Email" align ="center" >
+            <button>Submit!</button>
+        </form>
 
+    </div>
 
 </body>
