@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Creating Fixed Header and Footer with CSS</title>
+    <style>
+        /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+        body {
+            padding-top: 100px;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            /* Center the DIV horizontally */
+        }
+
+        .fixed-header,
+        .fixed-footer {
+            width: 100%;
+            position: fixed;
+            background: #333;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        .fixed-header {
+            top: 0;
+        }
+
+        .fixed-footer {
+            bottom: 0;
+        }
+
+        /* Some more styles to beutify this example */
+        nav a {
+            color:black;
+            text-decoration: none;
+            padding: 7px 25px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 100px;
+            padding: 0;
+            text-align: center;
+            background-color:#f44336;
+            width:100%;
+            color : white;
+             }
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            margin: 0 auto;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+
+            a:hover, a:active {
+            background-color: red;
+            }
+
+        .container p {
+            line-height: 15px;
+            /* Create scrollbar to test positioning */
+        }
+    </style>
+</head>
+
+<body style="background-color:#f8f7f7">
+    <div class="fixed-header">
+        <img src="logo.gif">
+    </div>
+    <div>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">Fee-Structure</a></li>
+                <li><a href="#">My Journey</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 Ravi Viswanadhula</div>
+    </div>
+</body>
+
+</html>
