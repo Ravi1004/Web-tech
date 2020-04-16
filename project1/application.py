@@ -31,12 +31,15 @@ def registration():
 
 
 @app.route("/registration", methods=["POST"])
-def show():
+def browser():
+    Firstname = request.form.get("fname")
+    Lastname = request.form.get("lname")
     username = request.form.get("uname")
     password = request.form.get("pass")
-    print(username + "" + password)
-    s = "username: " + username + "\n" + "password: "
-    for each in password:
-        s += "*"
+    # print(username + "" + password)
+    # s = "username: " + username + "\n" + "password: "
+    # for each in password:
+    #     s += "*"
+    s = "Hello " + Firstname + " " + Lastname + ": Your Username is " + username
     return s
 
