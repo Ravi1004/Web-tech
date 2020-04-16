@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, session, render_template
+from flask import Flask, session, render_template, request
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -27,3 +27,19 @@ db = scoped_session(sessionmaker(bind=engine))
 def registration():
 
     return render_template("registration.html")
+
+
+
+@app.route("/registration", methods=["POST"])
+def browser():
+    Firstname = request.form.get("fname")
+    Lastname = request.form.get("lname")
+    username = request.form.get("uname")
+    password = request.form.get("pass")
+    # print(username + "" + password)
+    # s = "username: " + username + "\n" + "password: "
+    # for each in password:
+    #     s += "*"
+    s = "Hello " + Firstname + " " + Lastname + ": Your Username is " + username
+    return s
+
