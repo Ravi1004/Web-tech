@@ -5,16 +5,15 @@ db = SQLAlchemy()
 
 
 class User(db.Model):
-    __tablename__ = "new_table"
+    _tablename_ = "users"
     username = db.Column(db.String, primary_key=True)
     password = db.Column(db.String, nullable=False)
-    user_created_on = db.Column(db.DateTime(), nullable=False)
+    user_created_on = db.Column(db.DateTime, nullable=False)
 
-    # def _init_(self, username, password, user_created_on):
-    #     self.username = username
-    #     self.password = password
-    #     # self.user_created_on = datetime.now()
-
+    def _init_(self, username, password):
+        self.username = username
+        self.password = password
+        self.user_created_on = datetime.now()
 
 class Books(db.Model):
     _tablename_ = "books"
@@ -22,3 +21,4 @@ class Books(db.Model):
     title = db.Column(db.String, nullable=False)
     author = db.Column(db.String, nullable=False)
     year = db.Column(db.Integer, nullable=False)
+
