@@ -14,3 +14,11 @@ class User(db.Model):
         self.username = username
         self.password = password
         self.user_created_on = datetime.now()
+
+class Books(db.Model):
+    _tablename_ = "books"
+    isbn = db.Column(db.String, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    author = db.Column(db.String, nullable=False)
+    year = db.Column(db.Integer, nullable=False)
+

@@ -56,9 +56,9 @@
 </head>
 
 <body bgcolor="#E6E6FA">
-    <form>
+    <form action="/registration" method="POST">
         <h2>Registration Form</h2>
-
+        <h3>{{message}}</h3>
         <label for="r1" id="fn">First Name :</label>
         <input type="text" name="fname" id="r1"><br />
 
@@ -71,6 +71,23 @@
         &nbsp;&nbsp;&nbsp;<label for="r4" id="pwd">Password :</label>
         <input type="password" name="pass" id="r4"><br />
         <button type="submit" value="Submit" id="button">Register</button>
+
+
+    </form>
+    <form action="/login" method="POST">
+        <h2>Login form</h2>
+        <h3>{{message}}</h3>
+
+
+
+        &nbsp;&nbsp;<label for="r3" id="un">Username :</label>
+        <input type="text" name="uname" id="r3"><br />
+
+        &nbsp;&nbsp;&nbsp;<label for="r4" id="pwd">Password :</label>
+        <input type="password" name="pass" id="r4"><br />
+        <button type="submit" value="Submit" id="button">Login</button>
+
+
     </form>
 </body>
 
