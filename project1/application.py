@@ -1,6 +1,7 @@
 from models import User
 import os
 
+
 import datetime
 
 from flask import Flask, session, render_template, request
@@ -53,10 +54,10 @@ def registration():
 def browser():
     Firstname = request.form.get("fname")
     Lastname = request.form.get("lname")
+
     Name = Firstname+" "+Lastname
     username = request.form.get("uname")
     password = request.form.get("pass")
-
 
     user_created_on = datetime.now()
     if User.query.get(username) != None:
@@ -99,3 +100,4 @@ def admin():
 
 #     with app.app_context():
 #         main()
+
